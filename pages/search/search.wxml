@@ -1,0 +1,118 @@
+<view class="container">
+
+    <!--默认隐藏-->
+<loading hidden="{{hiddenLoading}}">加载中...</loading>
+
+    <view class="wxSearch-section">
+    <view class="wxSearch-pancel">
+        <input bindinput="wxSearchInput" value="{{searchkey}}" bindconfirm="startsearchsongs" bindblur="wxSearchBlur" class="wxSearch-input" placeholder="请输入歌手或歌曲名" bindinput="listenSearchkeyInput" />
+    </view>
+    </view>
+
+    <block wx:if="{{searchshow}}">
+        <view class="wxSearchKey">
+        <text class="wxSearchTitle">最近搜索</text>
+        <view class="wxSearchKeyList">
+            <block wx:for="{{searchkeysdata}}" wx:for-index="idx">
+                <view class="wxSearchKeyItem" bindtap="wxSearchKeyTap" id="{{idx}}" data-key="{{item}}">{{item}}</view>
+            </block>
+        </view>
+        </view>
+    </block>
+    
+
+    <block wx:if="{{searchoff}}">
+
+        <block wx:for="{{searchsongArray}}" wx:for-item="searchsongItem" wx:for-index="idx">
+
+        <!--<block wx:if="{{blockbgshow}}">-->
+        <view class="block" bindtap="startplayssearchsong" id="{{idx}}">
+                <view class="left">
+                    <image src="{{searchsongItem.music_pic}}" />
+                </view>
+                <view class="right">
+                    <view class="content">
+                        <view>
+                            <text class="song-name">{{searchsongItem.song_name}}</text>	
+                        </view>
+                        <view>
+                            <text class="song-artists">{{searchsongItem.singer_name}}</text>
+                        </view>
+                    </view>
+                    
+                </view>
+            </view>	
+
+        <!--</block>-->
+
+
+        <!--<block wx:if="{{blockbgoff}}">
+        <view class="block" bindtap="startplayssearchsong" id="{{idx}}">
+                <view class="left">
+                    <image src="{{searchsongItem.music_pic}}" />
+                </view>
+                <view class="right">
+                    <view class="content">
+                        <view>
+                            <text class="song-name">{{searchsongItem.song_name}}</text>	
+                        </view>
+                        <view>
+                            <text class="song-artists">{{searchsongItem.singer_name}}</text>
+                        </view>
+                    </view>
+                    
+                </view>
+            </view>	
+
+        </block>-->
+
+            
+
+
+        </block>
+
+    </block>
+
+
+
+</view>
+
+
+<block wx:if="{{searchbottomshhow}}">
+<view class="playsongbgvieew">
+	
+	
+	<view>
+	<image class="songimagee" src="{{searchSongimgUrl}}"></image>
+	
+    <block wx:if="{{pplayorpause}}">
+	<image class="playstopimage" src="/images/播放.png" bindtap="playstopimagetaped"></image>
+    </block>
+
+
+    <block wx:if="{{pplayorpause22}}">
+    <image class="playstopimage22" src="/images/暂停.png" bindtap="playstopimagetaped22"></image>
+    </block>
+
+	</view>
+		
+	
+	
+	<view class="songnamemeview">
+	<text>{{searchSongName}}</text>
+	</view>
+
+
+    <block wx:if="{{lovesongshoow}}">
+	<image class="loveimmaggeshoow" src="/images/xin.png" bindtap="loveimmageshoowtaped"></image>
+    </block>
+
+    <block wx:if="{{lovesongofff}}">
+	<image class="loveimmaggeoff" src="/images/xinshou.png" bindtap="loveimmageofftaped"></image>
+    </block>
+
+	<image class="nextsongimage" src="/images/xiayiqu.png" bindtap="nextsongimagetaped"></image>
+	
+
+</view>
+</block>

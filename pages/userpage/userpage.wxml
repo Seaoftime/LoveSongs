@@ -1,0 +1,154 @@
+<view class="container">
+<loading hidden="{{hiddenLoading}}">加载中...</loading>
+
+    <view class="changetab">
+    <block wx:if="{{show}}">
+    <view class="thisday active" bindtap="showToday">我喜欢</view>
+    <view class="thismonth" bindtap="showMonth">最近播放</view>
+    </block>
+    <block wx:if="{{off}}">
+    <view class="thisday" bindtap="showToday">我喜欢</view>
+    <view class="thismonth active" bindtap="showMonth">最近播放</view>
+    </block>
+
+    <view class="thissearch" bindtap="showSearch">🔍</view>
+    </view>
+
+    <block wx:if="{{show}}">
+    <view class="userrr">
+                <view class="left">
+                    <image src="{{avatarUrll}}" />
+                </view>
+                <view class="right">
+                    <view class="content">
+                        <view>
+                            <text class="song-name">{{nickName}}</text>	
+                        </view>
+                        <view>
+                            <text class="userlikecount">{{ilikecountt}} 喜欢</text>
+                        </view>
+                    </view>
+                    
+                </view>
+            </view>	
+
+    <block wx:if="{{nolovedatashow}}">
+    <view class = "noloveedataviewone">
+        <text class = "noloovedatatextone">---您还没有喜欢的歌曲---</text>
+    </view>
+
+    <view class = "noloveedataviewtwo">
+        <text class = "noloovedatatexttwo">---请点击右侧搜索按钮搜索您喜欢的歌曲吧---</text>
+    </view>
+
+    </block>
+
+    <block wx:if="{{loadnewdata}}">
+        <button class = "loadnewdatabtn" bindtap="loadnewdataisclicked">点击加载</button>
+
+    </block>
+
+    <block wx:for="{{ilikedata}}" wx:for-item="searchsongItem" wx:for-index="idx">
+
+        <view class="block" bindtap="startplayilikesong" id="{{idx}}">
+                <view class="left">
+                    <image src="{{searchsongItem.music_pic}}" />
+                </view>
+                <view class="right">
+                    <view class="content">
+                        <view>
+                            <text class="song-name">{{searchsongItem.song_name}}</text>	
+                        </view>
+                        <view>
+                            <text class="song-artists">{{searchsongItem.singer_name}}</text>
+                        </view>
+                    </view>
+                    
+                </view>
+            </view>	
+    </block>
+    </block>
+
+
+
+    <block wx:if="{{off}}">
+
+    <block wx:if="{{norecenttdatashow}}">
+    <view class = "noloveedataviewone">
+        <text class = "noloovedatatextone">---您还没有播放过的歌曲---</text>
+    </view>
+
+    <view class = "noloveedataviewtwo">
+        <text class = "noloovedatatexttwo">---请点击右侧搜索按钮搜索您喜欢的歌曲吧---</text>
+    </view>
+
+    </block>
+
+    <block wx:for="{{recentplaydata}}" wx:for-item="searchsongItem" wx:for-index="idx">
+
+        <view class="block" bindtap="startplayrecentdatasong" id="{{idx}}">
+                <view class="left">
+                    <image src="{{searchsongItem.music_pic}}" />
+                </view>
+                <view class="right">
+                    <view class="content">
+                        <view>
+                            <text class="song-name">{{searchsongItem.song_name}}</text>	
+                        </view>
+                        <view>
+                            <text class="song-artists">{{searchsongItem.singer_name}}</text>
+                        </view>
+                    </view>
+                    
+                </view>
+            </view>	
+    </block>
+    </block>
+
+<block wx:if="{{botoommlinee}}">
+<view class="bottommlinee">--- 我也是有底线的 ---</view>
+</block>
+
+
+
+</view>
+
+
+<block wx:if="{{userbottomshhow}}">
+<view class="playsongbgvieew">
+	
+	
+	<view>
+	<image class="songimagee" src="{{userSongimgUrl}}"></image>
+	
+    <block wx:if="{{pplayorpause}}">
+	<image class="playstopimage" src="/images/播放.png" bindtap="playstopimagetaped"></image>
+    </block>
+
+
+    <block wx:if="{{pplayorpause22}}">
+    <image class="playstopimage22" src="/images/暂停.png" bindtap="playstopimagetaped22"></image>
+    </block>
+
+	</view>
+		
+	
+	
+	<view class="songnamemeview">
+	<text>{{userSongName}}</text>
+	</view>
+
+
+    <block wx:if="{{loveornotlove11}}">
+	<image class="loveimmagge" src="/images/xin.png" bindtap="loveimmageshoowtaped"></image>
+    </block>
+
+    <block wx:if="{{loveornotlove22}}">
+	<image class="loveimmagge" src="/images/xinshou.png" bindtap="lovesongtapedoff"></image>
+    </block>
+
+	<image class="nextsongimage" src="/images/xiayiqu.png" bindtap="nextsongimagetaped"></image>
+	
+
+</view>
+</block>

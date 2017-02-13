@@ -1,0 +1,279 @@
+.container{
+  padding:0;
+  position:relative;
+  padding-bottom:40rpx;
+  
+}
+
+
+page{
+  background:white;
+}
+
+.search{
+  padding-top: 20rpx;
+  background: white;
+  display: flex;
+  width:100%;
+  height:80rpx;
+  
+
+
+}
+
+.searchimg{
+  padding-top: 5rpx;
+  padding-left: 10rpx;
+  width:40rpx;
+  height:40rpx;
+  margin-right:20rpx;
+  border-radius:40rpx;
+}
+
+
+.searchheader{
+  background: white;
+  display: flex;
+  width:100%;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 12px;
+  padding-left: 10rpx;
+
+
+}
+
+
+.recentsearchsongbtnn{
+  background: orange;
+  display: flex;
+  /*flex-direction: row;
+  width: 25%;
+  height: 60rpx;*/
+  font-size: 16px;
+  border: 1px solid fuchsia;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.wxSearch-section{
+  background-color: #fff;
+  padding: 5px 10px;
+  border: 1px #eee solid;
+  width: 96%;
+  height: 80rpx;
+  
+}
+.wxSearch-pancel{
+  display: flex;
+  flex-direction: row;
+  padding-top: 6px;
+
+}
+.wxSearch-input{
+  flex: 8; 
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 5px;
+  
+
+}
+
+
+.wxSearchTitle{
+  display: block;
+  padding: 10px 5px 5px 10px;
+  font-size: 18px;
+  text-align: left;
+}
+
+
+.wxSearchMindKeyItem{
+  padding: 10px 5px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  font-size: 14px;
+  color: cornflowerblue;
+}
+
+.wxSearchKeyList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wxSearchKeyItem{
+  flex: 0 0 20%;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid #eee;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: rgb(240, 240, 240);
+  margin-left: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+.block {
+  background: white;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 140rpx;
+	margin-bottom: 1rpx; 
+}
+
+
+
+
+.left {
+  background: white;
+  width:120rpx;
+  height:120rpx;
+  margin-top: 10rpx;
+  margin-right:20rpx;
+  margin-left: 12rpx;
+  border-radius:120rpx;
+}
+
+.left image {
+	width: 100%;
+	height: 100%;
+  border-radius:120rpx;
+
+}
+
+.right {
+	flex: 1;
+	height: 100%;
+	border-bottom: 1px solid #eee;
+	box-sizing: border-box;
+	display: flex;
+}
+
+.content {
+	padding: 15rpx;
+	height: 100%;
+	width: 90%;
+	box-sizing: border-box;
+}
+
+
+
+
+.content view {
+	width: 100%;
+	margin-bottom: 20rpx;
+}
+
+.song-name {
+	font-size: 18px;
+}
+
+.song-artists {
+	font-size: 14px;
+	color: #999;
+}
+
+
+
+
+
+
+
+.playsongbgvieew{
+  position:fixed;
+  bottom:0;
+  width: 100%;
+  height: 60px;
+  background: rgb(230, 230, 230);
+  display: flex;
+
+}
+
+
+.playstopimage {
+  margin-left: -73rpx;
+  margin-bottom: 23rpx;
+  width: 50rpx;
+  height: 50rpx;
+
+}
+
+.playstopimage22 {
+  margin-left: -68rpx;
+  margin-bottom: 24rpx;
+  width: 50rpx;
+  height: 50rpx;
+
+
+}
+
+
+
+.songimagee{
+  background: white;
+  width:100rpx;
+  height:100rpx;
+  margin-left:20rpx;
+  margin-top: 8rpx;
+  border-radius:100rpx;
+
+}
+
+.songnamemeview{
+  background: rgb(230, 230, 230);
+  padding-left: 20rpx;
+  padding-top: 15rpx;
+  margin-top: 20rpx;
+  width:50%;
+  height:60rpx;
+  font-size: 18px;
+
+
+}
+
+
+.loveimmaggeshoow{
+  margin-left: 10rpx;
+  margin-top: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+
+}
+
+.loveimmaggeoff{
+  margin-left: 10rpx;
+  margin-top: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+
+}
+
+
+.nextsongimage {
+  margin-left: 45rpx;
+  margin-top: 33rpx;
+  width: 50rpx;
+  height: 50rpx;
+
+}

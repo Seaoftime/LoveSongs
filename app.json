@@ -1,0 +1,32 @@
+{
+
+
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/userpage/userpage",
+    "pages/search/search"
+  ],
+
+
+
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#EC80AC",
+    "navigationBarTitleText": "歌曲点播台",
+    "navigationBarTextStyle":"white"
+    
+  },
+
+
+   "networkTimeout": {
+        "request": 10000,
+        "connectSocket": 10000,
+        "uploadFile": 10000,
+        "downloadFile": 10000
+    },
+    "debug": true
+    
+
+
+}
